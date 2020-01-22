@@ -15,6 +15,9 @@
 		25ED62BD23D8793600E5809D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25ED62BB23D8793600E5809D /* LaunchScreen.storyboard */; };
 		25ED62C023D8793600E5809D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 25ED62BF23D8793600E5809D /* main.m */; };
 		25ED62CA23D8793600E5809D /* ImportTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 25ED62C923D8793600E5809D /* ImportTestTests.m */; };
+		25ED62D623D8794700E5809D /* SomeSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25ED62D523D8794700E5809D /* SomeSwift.swift */; };
+		25ED62D923D8795C00E5809D /* SomeLegacy.m in Sources */ = {isa = PBXBuildFile; fileRef = 25ED62D823D8795C00E5809D /* SomeLegacy.m */; };
+		25ED62DC23D879CD00E5809D /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25ED62DB23D879CD00E5809D /* Tests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +46,12 @@
 		25ED62C523D8793600E5809D /* ImportTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImportTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		25ED62C923D8793600E5809D /* ImportTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImportTestTests.m; sourceTree = "<group>"; };
 		25ED62CB23D8793600E5809D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25ED62D423D8794700E5809D /* ImportTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ImportTest-Bridging-Header.h"; sourceTree = "<group>"; };
+		25ED62D523D8794700E5809D /* SomeSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeSwift.swift; sourceTree = "<group>"; };
+		25ED62D723D8795C00E5809D /* SomeLegacy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SomeLegacy.h; sourceTree = "<group>"; };
+		25ED62D823D8795C00E5809D /* SomeLegacy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SomeLegacy.m; sourceTree = "<group>"; };
+		25ED62DA23D879CD00E5809D /* ImportTestTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ImportTestTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		25ED62DB23D879CD00E5809D /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +104,10 @@
 				25ED62BB23D8793600E5809D /* LaunchScreen.storyboard */,
 				25ED62BE23D8793600E5809D /* Info.plist */,
 				25ED62BF23D8793600E5809D /* main.m */,
+				25ED62D523D8794700E5809D /* SomeSwift.swift */,
+				25ED62D423D8794700E5809D /* ImportTest-Bridging-Header.h */,
+				25ED62D723D8795C00E5809D /* SomeLegacy.h */,
+				25ED62D823D8795C00E5809D /* SomeLegacy.m */,
 			);
 			path = ImportTest;
 			sourceTree = "<group>";
@@ -104,6 +117,8 @@
 			children = (
 				25ED62C923D8793600E5809D /* ImportTestTests.m */,
 				25ED62CB23D8793600E5809D /* Info.plist */,
+				25ED62DB23D879CD00E5809D /* Tests.swift */,
+				25ED62DA23D879CD00E5809D /* ImportTestTests-Bridging-Header.h */,
 			);
 			path = ImportTestTests;
 			sourceTree = "<group>";
@@ -157,9 +172,11 @@
 				TargetAttributes = {
 					25ED62A923D8793400E5809D = {
 						CreatedOnToolsVersion = 11.3;
+						LastSwiftMigration = 1130;
 					};
 					25ED62C423D8793600E5809D = {
 						CreatedOnToolsVersion = 11.3;
+						LastSwiftMigration = 1130;
 						TestTargetID = 25ED62A923D8793400E5809D;
 					};
 				};
@@ -212,6 +229,8 @@
 				25ED62AF23D8793400E5809D /* AppDelegate.m in Sources */,
 				25ED62C023D8793600E5809D /* main.m in Sources */,
 				25ED62B223D8793400E5809D /* SceneDelegate.m in Sources */,
+				25ED62D923D8795C00E5809D /* SomeLegacy.m in Sources */,
+				25ED62D623D8794700E5809D /* SomeSwift.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				25ED62CA23D8793600E5809D /* ImportTestTests.m in Sources */,
+				25ED62DC23D879CD00E5809D /* Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,6 +387,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SD6M2TGT89;
 				INFOPLIST_FILE = ImportTest/Info.plist;
@@ -376,6 +397,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.pahnev.ImportTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ImportTest/ImportTest-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -384,6 +408,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SD6M2TGT89;
 				INFOPLIST_FILE = ImportTest/Info.plist;
@@ -393,6 +418,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.pahnev.ImportTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ImportTest/ImportTest-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -400,7 +427,9 @@
 		25ED62D223D8793600E5809D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SD6M2TGT89;
 				INFOPLIST_FILE = ImportTestTests/Info.plist;
@@ -412,6 +441,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.pahnev.ImportTestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ImportTestTests/ImportTestTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ImportTest.app/ImportTest";
 			};
@@ -420,7 +452,9 @@
 		25ED62D323D8793600E5809D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SD6M2TGT89;
 				INFOPLIST_FILE = ImportTestTests/Info.plist;
@@ -432,6 +466,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.pahnev.ImportTestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ImportTestTests/ImportTestTests-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ImportTest.app/ImportTest";
 			};
